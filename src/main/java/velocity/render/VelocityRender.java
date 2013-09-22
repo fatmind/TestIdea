@@ -17,7 +17,7 @@ public class VelocityRender {
 		
 		VelocityEngine velocity = new VelocityEngine(properties);
 		VelocityContext context = new VelocityContext();
-		context.put("name", "czy");
+		context.put("name", "");
 		
 		Template template = velocity.getTemplate("D:/workspace/TestIdea/src/main/java/velocity/render/template.vm");
 		BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out));

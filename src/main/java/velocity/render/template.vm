@@ -1,1 +1,15 @@
-${name}
+#if($name)
+	"success" : xxx${name}xxx
+	#set($tag = "hello")
+#else
+	"fail" : $!{name}
+#end
+
+hello : $tag
+world : $!{world}
+
+#set($pp = false)
+##set($pp = "good")
+#if($pp)
+	pp : $pp
+#end
