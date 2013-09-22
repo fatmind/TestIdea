@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="GB2312"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+    
+    <appender name="testlog4jFile" class="org.apache.log4j.FileAppender">
+        <param name="file" value="log/testlog4j.log"/>
+        <param name="append" value="false"/>
+        <param name="encoding" value="GB2312"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="[ %d - %X{method} %X{requestURIWithQueryString} ] %-5p %c{2} - %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="testlog4jConsole" class="org.apache.log4j.ConsoleAppender">
+        <param name="encoding" value="utf-8"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="[ %d - %X{method} %X{requestURIWithQueryString} ] %-5p %c{2} - %m%n"/>
+        </layout>
+    </appender>
+
+    <root> 	
+        <level value="WARN"/>
+        <appender-ref ref="testlog4jConsole"/>
+        <appender-ref ref="testlog4jFile"/>
+    </root>
+  	 
+</log4j:configuration>
