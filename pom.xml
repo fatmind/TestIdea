@@ -9,7 +9,36 @@
 
 	<name>TestIde</name>
 
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>log4j</groupId>
+				<artifactId>log4j</artifactId>
+				<version>1.2.15</version>
+				<exclusions>
+					<exclusion>
+						<groupId>javax.jms</groupId>
+						<artifactId>jms</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>com.sun.jdmk</groupId>
+						<artifactId>jmxtools</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>com.sun.jmx</groupId>
+						<artifactId>jmxri</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
 	<dependencies>
+
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>junit</groupId>
@@ -47,27 +76,7 @@
 			<type>jar</type>
 			<scope>compile</scope>
 		</dependency>
-		<dependency>
-			<groupId>apache-log4j</groupId>
-			<artifactId>log4j</artifactId>
-			<version>1.2.15</version>
-			<type>jar</type>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
-			<groupId>apache-httpclient</groupId>
-			<artifactId>commons-httpclient</artifactId>
-			<version>3.1</version>
-			<type>jar</type>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.taobao.common.tair</groupId>
-			<artifactId>common-tair</artifactId>
-			<version>2.2.4</version>
-			<type>jar</type>
-			<scope>compile</scope>
-		</dependency>
+
 		<dependency>
 			<groupId>org.apache.mina</groupId>
 			<artifactId>mina-core</artifactId>
@@ -75,13 +84,7 @@
 			<type>jar</type>
 			<scope>compile</scope>
 		</dependency>
-		<dependency>
-			<groupId>com.taobao.common.monitor</groupId>
-			<artifactId>common-monitor</artifactId>
-			<version>1.0.9</version>
-			<type>jar</type>
-			<scope>compile</scope>
-		</dependency>
+
 		<dependency>
 			<groupId>commons-lang</groupId>
 			<artifactId>commons-lang</artifactId>
@@ -119,7 +122,7 @@
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>fastjson</artifactId>
-			<version>1.1.9</version>
+			<version>1.1.36</version>
 		</dependency>
 
 
@@ -132,37 +135,6 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.taobao.tair</groupId>
-			<artifactId>tair-client</artifactId>
-			<version>2.3.1</version>
-			<type>jar</type>
-			<scope>compile</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>com.taobao.rate</groupId>
-			<artifactId>ratecenter-client</artifactId>
-			<version>2.0.2-SNAPSHOT</version>
-			<type>jar</type>
-			<scope>compile</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>com.taobao.hsf</groupId>
-			<artifactId>hsfunit</artifactId>
-			<version>1.0.2</version>
-			<type>jar</type>
-			<scope>test</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>com.taobao.simba</groupId>
-			<artifactId>simbacall-api</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
-			<type>jar</type>
-		</dependency>
-
-		<dependency>
 			<groupId>commons-beanutils</groupId>
 			<artifactId>commons-beanutils-core</artifactId>
 			<version>1.8.3</version>
@@ -170,11 +142,9 @@
 
 		<!-- mysql driver -->
 		<dependency>
-			<groupId>jdbc.mysql</groupId>
-			<artifactId>mysql-connector</artifactId>
-			<version>5.1.5</version>
-			<type>jar</type>
-			<scope>runtime</scope>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.26</version>
 		</dependency>
 
 

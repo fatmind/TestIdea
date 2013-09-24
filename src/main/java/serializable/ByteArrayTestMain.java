@@ -1,10 +1,9 @@
 package serializable;
 
+import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-
-import com.alibaba.common.lang.io.ByteArrayInputStream;
 
 public class ByteArrayTestMain {
 
